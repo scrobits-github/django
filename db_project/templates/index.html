@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+    <title>
+        Django Project
+    </title>
+</head>
+
+<body>
+    <h1>
+        Employee Info
+    </h1>
+    <table border="1">
+        <tr>
+            <th>Employee Id</th>
+            <th>Employee Name</th>
+            <th>Email</th>
+            <th>Salary</th>
+        </tr>
+        {% for datadislpay in SqlSeverConn%}
+        <tr>
+            <td>{{datadislpay.emp_id}}</td>
+            <td>{{datadislpay.emp_name}}</td>
+            <td>{{datadislpay.emp_email}}</td>
+            <td>{{datadislpay.emp_salary}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
